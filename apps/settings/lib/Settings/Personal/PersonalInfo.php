@@ -157,7 +157,6 @@ class PersonalInfo implements ISettings {
 			'defaultPhoneRegion' => $this->config->getSystemValueString('default_phone_region'),
 			'location' => $this->getProperty($account, IAccountManager::PROPERTY_ADDRESS),
 			'website' => $this->getProperty($account, IAccountManager::PROPERTY_WEBSITE),
-			'twitter' => $this->getProperty($account, IAccountManager::PROPERTY_TWITTER),
 			'fediverse' => $this->getProperty($account, IAccountManager::PROPERTY_FEDIVERSE),
 			'languageMap' => $this->getLanguageMap($user),
 			'localeMap' => $this->getLocaleMap($user),
