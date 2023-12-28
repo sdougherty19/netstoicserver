@@ -80,9 +80,6 @@ script('settings', [
 		<div id="vue-website-section"></div>
 	</div>
 	<div class="personal-settings-setting-box">
-		<div id="vue-twitter-section"></div>
-	</div>
-	<div class="personal-settings-setting-box">
 		<div id="vue-fediverse-section"></div>
 	</div>
 	<?php if ($_['profileEnabledGlobally']) : ?>
