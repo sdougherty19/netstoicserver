@@ -2819,7 +2819,7 @@
 			});
 		},
 
-		openLocalClient: function(path) {
+		/**openLocalClient: function(path) {
 			var link = OC.linkToOCS('apps/files/api/v1', 2) + 'openlocaleditor?format=json';
 
 			$.post(link, {
@@ -2837,7 +2837,7 @@
 				.fail(function() {
 					OC.Notification.show(t('files', 'Failed to redirect to client'))
 				})
-		},
+		},*/
 
 		/**
 		 * Updates the given row with the given file info
