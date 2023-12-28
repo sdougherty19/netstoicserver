@@ -128,11 +128,11 @@ class NewUserMailHelper {
 		$emailTemplate->setSubject($l10n->t('Your %s account was created', [$this->themingDefaults->getName()]));
 		$emailTemplate->addHeader();
 		if ($displayName === $userId) {
-			$emailTemplate->addHeading($l10n->t('Welcome aboard'));
+			$emailTemplate->addHeading($l10n->t('Welcome!'));
 		} else {
-			$emailTemplate->addHeading($l10n->t('Welcome aboard %s', [$displayName]));
+			$emailTemplate->addHeading($l10n->t('Welcome! %s', [$displayName]));
 		}
-		$emailTemplate->addBodyText($l10n->t('Welcome to your %s account, you can add, protect, and share your data.', [$this->themingDefaults->getName()]));
+		$emailTemplate->addBodyText($l10n->t('Welcome to your %s account, you can add documents, photos and other files, protect precious or confidential information, and share your files securely.', [$this->themingDefaults->getName()]));
 		if ($user->getBackendClassName() !== 'LDAP') {
 			$emailTemplate->addBodyText($l10n->t('Your username is: %s', [$userId]));
 		}
@@ -142,20 +142,6 @@ class NewUserMailHelper {
 			$leftButtonText = $l10n->t('Go to %s', [$this->themingDefaults->getName()]);
 		}
 
-		$clientDownload = $this->config->getSystemValue('customclient_desktop', 'https://nextcloud.com/install/#install-clients');
-		if ($clientDownload === '') {
-			$emailTemplate->addBodyButton(
-				$leftButtonText,
-				$link
-			);
-		} else {
-			$emailTemplate->addBodyButtonGroup(
-				$leftButtonText,
-				$link,
-				$l10n->t('Install Client'),
-				$clientDownload
-			);
-		}
 
 		$emailTemplate->addFooter('', $lang);
 
