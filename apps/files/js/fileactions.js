@@ -726,7 +726,7 @@
 				});
 			}
 
-			if (!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+			/**if (!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 				this.registerAction({
 					name: 'EditLocally',
 					displayName: function(context) {
@@ -750,7 +750,7 @@
 						context.fileList.openLocalClient(path);
 					},
 				});
-			}
+			}*/
 
 			this.registerAction({
 				name: 'Open',
