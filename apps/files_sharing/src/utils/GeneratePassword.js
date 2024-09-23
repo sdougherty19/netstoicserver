@@ -41,7 +41,7 @@ export default async function() {
 		try {
 			const request = await axios.get(config.passwordPolicy.api.generate)
 			if (request.data.ocs.data.password) {
-				showSuccess(t('files_sharing', 'Password created successfully'))
+				//showSuccess(t('files_sharing', 'Password created successfully')) Removed notification
 				return request.data.ocs.data.password
 			}
 		} catch (error) {
